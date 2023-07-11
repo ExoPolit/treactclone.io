@@ -80,7 +80,7 @@ img {
   margin: 32px 0;
 }
 
-i {
+.testimonial--icon {
   font-size: 22px;
   color: rgba(199, 196, 12, 0.89);
   padding-bottom: 24px;
@@ -163,6 +163,7 @@ NAVIGATION BAR
   text-align: center;
   border: none;
   color: #7342d6;
+  display: none;
 }
 .menu__backdrop{
   position: absolute;
@@ -204,6 +205,9 @@ NAVIGATION BAR
   top: 10px;
   padding: 8px;
   color: white;
+}
+.menu__link:hover{
+  color: rgba(151, 151, 151, 0.616);
 }
 /* 
 
@@ -725,9 +729,8 @@ PRICING
 
 .shadow2 {
   background: linear-gradient(
-    to bottom right,
-    rgb(34, 34, 211),
-    rgba(128, 126, 126, 0.541)
+    135deg,
+    rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%
   );
   border-radius: 10px;
 }
@@ -1193,5 +1196,39 @@ flex-direction: column;
 
 .btn__menu{
 display: block;
+}
+}
+
+@media (max-width: 550px){
+  img{
+    display: none;
+  }
+
+  .btn__menu{
+    display: block;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .section__description{
+    width: calc(100vw - 100px);
+  }
+  .woman__info{
+    display: none;
+  }
+  .dropdown__header{
+    font-size: 14px;
+  }
+ .header--big{
+  font-size: 18px;
+ }
+ .services__heading--2{
+text-align: center;  
+}
+.title{
+  filter: drop-shadow(1px 1px 2px #6315ff33);
 }
 }
