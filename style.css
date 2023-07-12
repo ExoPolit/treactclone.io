@@ -96,8 +96,6 @@ NAVIGATION BAR
 
 .logo,
 .nav__logo {
-  font-size: 24px;
-  font-weight: 900;
   max-width: 20%;
 }
 
@@ -109,6 +107,8 @@ NAVIGATION BAR
 }
 
 .logo__text {
+  font-size: 24px;
+  font-weight: 500;
   color: #243e63;
   margin-left: 10px;
 }
@@ -131,12 +131,11 @@ NAVIGATION BAR
 }
 
 .nav__link--effects {
-  position: relative;
   color: #243e63;
   margin: 12px 0;
 }
 
-.nav__link--effects:hover {
+.nav__link .nav__link--effects:hover {
   color: rgb(32, 12, 211);
   text-decoration: underline;
 }
@@ -147,6 +146,7 @@ NAVIGATION BAR
   padding: 8px 16px;
   transition: all 300ms ease;
   cursor: pointer;
+  
 }
 
 .nav__signup:hover {
@@ -154,7 +154,7 @@ NAVIGATION BAR
 }
 
 .nav__anchor--primary {
-  color: white;
+  color: rgb(248, 247, 247);
 }
 
 .btn__menu{
@@ -219,9 +219,10 @@ HEADER
   margin: 0px 154px;
   padding: 96px 0;
 }
-
+.header__img{
+  max-width: 600px;
+}
 .section__column--left {
-  width: 100%;
   max-width: 500px;
 }
 .header__img--wrapper {
@@ -247,10 +248,7 @@ HEADER
 .header__input--wrapper {
   margin: 12px 0;
   position: relative;
-  width: 100%;
-  height: 40%;
   display: flex;
-  width: 100%;
   border: none;
   border-radius: 9999px;
 }
@@ -1054,7 +1052,7 @@ FOOTER
 
   h1
 {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 400;
   }
 
@@ -1062,17 +1060,16 @@ FOOTER
     font-size: 36px;
   }
   .section__description {
+    max-width: 500px;
     flex-direction: column;
+    padding: 0;
   }
 
-  .section__column--left {
-    width: 100%;
-  }
 
   .header__img,
   img,
   .logo {
-    width: 500px;
+    max-width: 500px;
   }
 
   #em {
@@ -1095,7 +1092,7 @@ FOOTER
     text-align: center;
   }
   .customers__img {
-    width: 400px;
+    max-width: 400px;
   }
   #features {
     padding: 0;
@@ -1200,6 +1197,9 @@ display: block;
 }
 
 @media (max-width: 550px){
+  nav{
+    justify-content: space-between;
+  }
   img{
     display: none;
   }
