@@ -379,7 +379,7 @@ FEATURES
   margin-bottom: 10px;
   color: #243e63;
   position: relative;
-  padding: 0 112px 12px 0;
+  
 }
 
 .title__big {
@@ -438,7 +438,7 @@ QUALITIY WORK
 }
 
 .qw__img {
-  width: 600px;
+  max-width: 600px;
 }
 
 /*
@@ -688,30 +688,31 @@ PRICING
 }
 
 .shadow-1 {
-  background-color: rgba(250, 235, 215, 0.377);
+  background-color: rgb(255, 255, 255);
   border-top: 10px solid rgb(56, 178, 172);
   border-radius: 10px;
 }
 
 .price__btn--personal {
-  background: linear-gradient(
-    115deg,
-    rgb(56, 178, 172) 0%,
-    rgb(129, 230, 217) 100%
-  );
+  background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
 }
 
 .price__button {
-  margin: 16px 0;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
   border: none;
-  padding: 12px 40px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-radius: 999px;
   cursor: pointer;
   color: rgb(214, 211, 211);
   opacity: 0.65;
   transition: all 200ms ease;
+}
+
+.price__btn--all{
+  padding: 0.75rem 2rem;
 }
 
 .price__button:hover {
@@ -722,10 +723,7 @@ PRICING
 }
 
 .shadow2 {
-  background: linear-gradient(
-    135deg,
-    rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%
-  );
+  background-image: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
   border-radius: 10px;
 }
 
@@ -735,13 +733,13 @@ PRICING
 }
 
 .shadow3 {
-  background-color: rgba(179, 179, 179, 0.247);
+  background-color: rgb(255, 255, 255);
   border-top: 10px solid rgba(238, 90, 85, 0.8);
   border-radius: 10px;
 }
 
 .price__btn--enterprise {
-  background: linear-gradient(to bottom right, red, rgb(153, 153, 153));
+  background: linear-gradient(115deg, #f56565 0%, rgb(254, 178, 178) 100%);;
 }
 
 .Business {
@@ -776,6 +774,7 @@ TESTIMONIALS
   margin-top: 24px;
   font-size: 18px;
   line-height: 1.5;
+  color: #7c8ba1;
 }
 
 .tesimonials__img {
@@ -786,6 +785,7 @@ TESTIMONIALS
 .testimonials__content--right {
   margin: 32px;
   max-width: 550px;
+  width: 100%;
 }
 
 .subheading {
@@ -829,6 +829,7 @@ TESTIMONIALS
   padding: 0 24px;
   position: relative;
   top: 2rem;
+  background-color: transparent;
   font-size: 20px;
   border: none;
   cursor: not-allowed;
@@ -964,13 +965,8 @@ FOOTER
 
 */
 #footer {
-  width: 99vw;
   height: calc(100vh - 400px);
-  background: linear-gradient(
-    to top left,
-    rgb(8, 30, 131),
-    rgba(24, 103, 187, 0.897)
-  );
+  background-color: rgb(100, 21, 255);
 }
 .footer__container {
   display: flex;
@@ -1041,6 +1037,11 @@ FOOTER
 }
 
 @media (max-width: 768px) {
+
+  body{
+    margin: 0;
+  }
+
   nav {
     height: 68px;
   }
@@ -1053,10 +1054,10 @@ FOOTER
   h1
 {
     font-size: 36px;
-    font-weight: 400;
+    
   }
   h2{
-    font-weight: 24px;
+    font-size: 30px;
   }
 
   .section__description {
@@ -1196,39 +1197,72 @@ display: block;
 }
 }
 
-@media (max-width: 550px){
-  nav{
-    justify-content: space-between;
-  }
-  img{
-    display: none;
-  }
-
+@media (max-width: 360px){
   .btn__menu{
     display: block;
-  }
-  .row{
+    }
+    h1{
+      font-size: 30px;
+    }
+
+  nav{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex: 1 1 0%;
+    margin-left: 1.8rem;
   }
-  .section__description{
-    width: calc(100vw - 100px);
-  }
-  .woman__info{
-    display: none;
-  }
-  .dropdown__header{
-    font-size: 14px;
-  }
- .header--big{
-  font-size: 18px;
- }
- .services__heading--2{
-text-align: center;  
+.nav__links{
+  display: none;
 }
-.title{
-  filter: drop-shadow(1px 1px 2px #6315ff33);
+.nav__logo{
+  width: 100%;
+  max-width: 2.5rem;
 }
+#header, #features, #qualitiyWork, #steps, #values, #pricing, #testimonials, #faqs, #getStarted, #footer{
+  margin: 0;
+  padding: 32px 16px;
+}
+.section__description{
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+.header__input--wrapper{
+  flex-direction: column;
+  align-items: center;
+  
+}
+#em{
+  text-align: center;
+  margin: 0;
+}
+.submit{
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  top: 0;
+  right: 0;
+  padding: 12px 0;
+}
+.section__dustomers--wrapper{
+  margin-top: 2.3rem;
+}
+
+.services__heading--2{
+  font-size: 2.25rem;
+  letter-spacing: 0.025rem;
+}
+.section__description--para-top{
+    margin-top: 1rem;
+    max-width: 36rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.625;
+}
+.purple{
+  font-size: 16px;
+}
+.qw__heading{
+  font-size: 30px;
+}
+
 }
