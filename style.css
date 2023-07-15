@@ -645,7 +645,9 @@ PRICING
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  
+}
+.shadow-1, .shadow3{
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .cards__wrapper{
   display: flex;
@@ -703,6 +705,7 @@ PRICING
 }
 
 .price__button {
+  margin-bottom: 10px;
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1014,6 +1017,11 @@ FOOTER
   align-items: center;
   opacity: 0.3;
 }
+.footer__logo-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .footer__logo {
   width: 25%;
@@ -1045,8 +1053,8 @@ FOOTER
 
 @media (max-width: 768px) {
 
-  body{
-    margin: 0;
+  img{
+    max-width: 352px;
   }
 
   nav {
@@ -1057,7 +1065,10 @@ FOOTER
     display: none;
   }
 
-
+  #header, #features, #qualitiyWork, #steps, #values, #pricing, #testimonials, #faqs, #getStarted, #footer{
+    margin: 0 96px;
+    padding: 96px 0;
+  }
   h1
 {
     font-size: 36px;
@@ -1068,16 +1079,8 @@ FOOTER
   }
 
   .section__description {
-    max-width: 500px;
     flex-direction: column;
     padding: 0;
-  }
-
-
-  .header__img,
-  img,
-  .logo {
-    max-width: 500px;
   }
 
   #em {
@@ -1102,14 +1105,12 @@ FOOTER
   .customers__img {
     max-width: 400px;
   }
-  #features {
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
-  }
 
   .title {
     font-size: 24px;
+  }
+  .services__top{
+    text-align: center;
   }
   .services__column--para {
     font-size: 14px;
@@ -1121,31 +1122,44 @@ FOOTER
   .text__container {
     margin: 0;
   }
+.quality__content--container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #qualitiyWork {
-    margin: 0 auto;
+  .qw__text--left{
+    margin-top: 10px;
   }
-  .quality__content--container {
-    align-items: center;
-    text-align: center;
-    flex-direction: column-reverse;
-  }
+.steps__heading--big{
+  font-size: 36px;
+}
 .steps__container{
-  flex-direction: column;
+  margin: 0;
   padding: 32px 0;
 }
 .list__container{
   margin-top: 16px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
 }
+
+.list__container--steps{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list__input{
+  font-size: 12px;
+  line-height: 1rem;
+}
+
 
 .values__container{
 flex-direction: column-reverse;
 margin: 32px 32px;
 text-align: center;
-
+justify-content: center;
+align-items: center;
 }
 .values__df--info{
   flex-direction: column;
@@ -1195,6 +1209,7 @@ flex-direction: column;
 }
 
 #footer{
+  margin: 0;
   width: 100%;
   height: 100%;
 }
@@ -1207,6 +1222,29 @@ display: block;
 @media (max-width: 360px){
   .btn__menu{
     display: block;
+    font-size: 24px;
+    }
+    .btn__menu--close{
+      color: black;
+      font-size: 24px;
+    }
+    .menu__backdrop{
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      right: 0;
+      bottom: 65%;
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    .menu__list{
+      padding: 8px 0;
+      
+    }
+    .menu__link{
+      color: black;
+      font-size: 16px;
     }
     h1{
       font-size: 30px;
@@ -1270,10 +1308,15 @@ display: block;
 }
 .steps__heading--big{
   font-size: 2.5rem;
-  
-}
+  }
+  .header--small{
+    font-size: 24px;
+  }
 .list__item--df{
 flex-direction: column;
+}
+.steps__container{
+  flex-direction: column;
 }
 .steps__content{
   display: flex;
@@ -1285,19 +1328,31 @@ flex-direction: column;
   text-align: center;
   line-height: 2rem;
 }
+.pricing__container{
+  margin: 0;
+}
 .pricing__header{
   line-height: 1;
 }
 .pricing__header p{
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.14;
+}
+.pricing__header h2{
+  font-size: 2.25rem;
+  line-height: 1.25;
+  letter-spacing: 0.8;
+
+}
+.shadow2{
+  color: white;
 }
 .top__heading{
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
 }
 .mid-bar{
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 24px;
 }
 .price__button{
@@ -1324,11 +1379,24 @@ margin-top: 0;
   right: 0;
   top: 5rem;
 }
-.tesimonials__btn{
+.testimonials__btn--wrapper{
   position: relative;
   display: flex;
   flex-direction: row;
-  top: 5rem;
+  top: 2.89rem;
+  margin-bottom: 32px;
+}
+#faqs{
+margin-top: 40px;
+}
+.dropdown__area{
+  margin: 0 32px;
+}
+.dropdown__header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
 .qw__heading{
   font-size: 30px;
@@ -1336,6 +1404,38 @@ margin-top: 0;
 .qw__wrapper{
   display: flex;
   flex-direction: column-reverse;
+}
+.qw__text--left{
+  margin-top: 10px;
+}
+.getstarted__container{
+  width: 100%;
+}
+.getstarted__header{
+  text-align: center;
+  font-size: 24px;
+}
+.getstarted__links{
+  flex-direction: column;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+}
+.link__orange{
+  margin-bottom: 10px;
+}
+.footer__list--container{
+  flex-wrap: wrap;
+  text-align: center;
+}
+.footer__list--header{
+  font-size: 1.45rem;
+}
+.footer__list{
+padding: 12px;
+margin: 32px 0;
+}
+.footer__end{
+  flex-direction: column;
 }
 
 }
