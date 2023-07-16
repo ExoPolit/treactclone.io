@@ -1350,6 +1350,17 @@ FOOTER
   .testimonials__btn--wrapper{
     display: flex;
   }
+  .getstarted__header{
+    font-size: 24px;
+  }
+  .getstarted__links{
+    margin-top: 24px;
+  }
+  .getstarted__link {
+    margin: 0;
+    font-size: 14px;
+    padding: 12px;
+  }
 
 }
 
