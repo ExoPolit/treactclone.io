@@ -966,7 +966,7 @@ FOOTER
 
 */
 #footer {
-  height: calc(100vh - 400px);
+  
   background-color: rgb(100, 21, 255);
 }
 .footer__container {
@@ -1040,6 +1040,19 @@ FOOTER
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 1200px){
+  .getstarted__container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 38px 48px;
+    text-align: center;
+  }
+
+  .getstarted__links {
+    margin-top: 34px;
+  }
 }
 
 @media screen and (max-width: 768px) {
