@@ -48,7 +48,7 @@ h2 {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 28px 12px;
+  padding: 28px 40px;
 }
 
 img {
@@ -89,6 +89,7 @@ button {
 NAVIGATION BAR
 
 */
+
 
 .logo,
 .nav__logo {
@@ -1256,6 +1257,9 @@ FOOTER
   #nav {
     margin-left: 10px;
   }
+  .section__column--left{
+    text-align: center;
+  }
   .qw__wrapper {
     flex-direction: column-reverse;
     justify-content: center;
@@ -1265,23 +1269,53 @@ FOOTER
   .qw__text--left {
     margin-top: 24px;
   }
+  .steps__img{
+    padding-bottom: 24px;
+  }
   .steps__container {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+  .number{
+    margin-top: 12px;
+    margin-bottom: 24px;
   }
   .list__item--df {
     display: block;
+    
+  }
+  .list__input{
+    font-size: 16px;
+    
   }
   .steps__content {
     text-align: center;
+    
   }
   .values__text--left {
     margin-top: 24px;
   }
-  .values__text--left h2{
+  .values__text--left h2 {
     margin-top: 24px;
   }
+  .testimonials__content--right {
+    text-align: center;
+  }
+  .faq__dropdown,
+  .faq__container--top {
+    margin: 0 24px;
+  }
+  .getstarted__container{
+    width: 100%;
+  }
+  .footer__end{
+    flex-direction: column;
+  }
+ .footer__list--container{
+  text-align: center;
+ }
 }
 
 @media screen and (max-width: 360px) {
